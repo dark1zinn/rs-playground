@@ -1,5 +1,5 @@
 [workspace]
 members = [
-    "./m*", "rustlings",
+    "./crates/*", "rustlings",
 ]
 resolver = "2"
