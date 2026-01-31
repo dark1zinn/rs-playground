@@ -61,6 +61,12 @@
               cargo-edit
               cargo-watch
               rust-analyzer
+              
+              # libs
+              libxcb
+              libxcb-util
+              libxkbcommon
+              libx11
             ];
 
             env = {
