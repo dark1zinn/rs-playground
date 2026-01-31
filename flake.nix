@@ -72,6 +72,8 @@
                 pkgs.libxcb-util
                 pkgs.libxkbcommon
                 pkgs.libx11
+                pkgs.wayland
+                pkgs.vulkan-loader
               ];
             };
           };
