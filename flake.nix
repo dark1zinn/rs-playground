@@ -61,17 +61,18 @@
               cargo-edit
               cargo-watch
               rust-analyzer
-              
-              # libs
-              libxcb
-              libxcb-util
-              libxkbcommon
-              libx11
             ];
-
+            
             env = {
               # Required by rust-analyzer
               RUST_SRC_PATH = "${pkgs.rustToolchain}/lib/rustlib/src/rust/library";
+              RUST_BACKTRACE = 1;
+              LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
+                pkgs.libxcb
+                pkgs.libxcb-util
+                pkgs.libxkbcommon
+                pkgs.libx11
+              ];
             };
           };
         }
